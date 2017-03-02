@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: lighter;
+
+  src: url('../assets/fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: normal;
+
+  src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: bold;
+
+  src: url('../assets/fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'SourceSerifPro';
+  font-weight: bold;
+
+  src: url('../assets/fonts/SourceSerifPro-Semibold.ttf');
+}
+
+
+body {
+  margin: 0;
+
+  background: #f8f8f8;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: flex;
+
+  height: 90px;
+
+  background: #ffffff;
+}
+
+header .logo {
+  width: 40px;
+  height: 40px;
+  margin: 25px 0 25px 5%;
+
+  flex: 2;
+}
+
+header .navigation {
+  display: flex;
+
+  height: 90px;
+  margin-right: 5%;
+
+  align-items: center;
+  flex: 1;
+}
+
+header .navigation--mobile {
+  display: none;
+}
+
+header .navigation a {
+  font-family: 'OpenSans';
+  font-size: 12px;
+  font-weight: bold;
+
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  color: #454545;
+
+  flex: 1;
+}
+
+#projects {
+  display: flex;
+
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#projects .quote {
+  font-family: 'SourceSerifPro';
+  font-weight: bold;
+
+  margin: 40px 0 0 0;
+
+  text-align: center;
+  letter-spacing: 2px;
+
+  color: #454545;
+
+  flex-shrink: 0;
+}
+
+#projects .quote h1 {
+  font-size: 13px;
+}
+
+#projects .quote h2 {
+  font-size: 11px;
+
+  margin: 10px;
+
+  text-align: right;
+}
+
+#projects .container {
+  display: flex;
+
+  text-align: center;
+
+  flex-basis: 960px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#projects .flex {
+  display: flex;
+
+  margin: 40px 0;
+
+  justify-content: center;
+}
+
+#projects .item {
+  font-family: 'OpenSans';
+
+  padding: 15px 18px 10px 18px;
+
+  text-align: center;
+  letter-spacing: 2px;
+
+  color: #454545;
+  background: white;
+}
+
+#projects .title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#projects .method {
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+#about {
+  display: flex;
+
+  margin: 80px 0;
+
+  background: #ffffff;
+
+  justify-content: center;
+}
+
+#about p {
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 65px;
+
+  color: #636363;
+
+  flex-basis: 60%;
+}
+
+
+
+@media (max-width: 800px) {
+  header .navigation {
+    justify-content: flex-end;
+  }
+
+  header .navigation--mobile {
+    display: block;
+  }
+
+  header .navigation a {
+    display: none;
+  }
+
+  #projects .flex {
+    display: flex;
+
+    margin: 20px 0;
+
+    justify-content: center;
+  }
+}
