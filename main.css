@@ -41,24 +41,24 @@ header {
   height: 90px;
 
   background: #ffffff;
+
+  justify-content: space-between;
 }
 
 header .logo {
   width: 40px;
   height: 40px;
   margin: 25px 0 25px 5%;
-
-  flex: 2;
 }
 
 header .navigation {
   display: flex;
 
+  width: 30%;
   height: 90px;
   margin-right: 5%;
 
   align-items: center;
-  flex: 1;
 }
 
 header .navigation--mobile {
@@ -174,19 +174,45 @@ header .navigation a {
   flex-basis: 60%;
 }
 
-
-
 @media (max-width: 800px) {
-  header .navigation {
-    justify-content: flex-end;
-  }
-
   header .navigation--mobile {
     display: block;
+
+    margin-right: 5%;
+
+    cursor: pointer;
+  }
+
+  header .navigation {
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    left: 0;
+
+    display: block;
+
+    -webkit-transition: top 0.2s ease-in-out;
   }
 
   header .navigation a {
-    display: none;
+    line-height: 60px;
+
+    display: block;
+
+    width: 100vw;
+    height: 60px;
+
+    color: white;
+    background: black;
+  }
+
+  header .active {
+    top: 90px;
+  }
+
+  #projects {
+    position: relative;
+    z-index: -999;
   }
 
   #projects .flex {
