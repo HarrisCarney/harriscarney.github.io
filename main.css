@@ -156,11 +156,13 @@ header .navigation a {
 #works .title {
   font-size: 12px;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 #works .method {
   font-size: 10px;
   font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
 }
 
 #about {
