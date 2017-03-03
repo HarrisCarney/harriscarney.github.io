@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OpenSans';
-  font-weight: lighter;
+  font-weight: 300;
 
   src: url('../assets/fonts/OpenSans-Light.ttf');
 }
@@ -37,10 +37,10 @@ body {
 
 header {
   position: fixed;
+  z-index: 1;
   top: 0;
 
   width: 100vw;
-  z-index: 1;
 }
 
 header .container {
@@ -76,7 +76,7 @@ header .navigation--mobile {
 header .navigation a {
   font-family: 'OpenSans';
   font-size: 11px;
-  font-weight: normal;
+  font-weight: bold;
 
   text-align: center;
   text-decoration: none;
@@ -156,13 +156,11 @@ header .navigation a {
 #works .title {
   font-size: 12px;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
 }
 
 #works .method {
   font-size: 10px;
-  font-weight: lighter;
-  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
 }
 
 #about {
@@ -170,7 +168,7 @@ header .navigation a {
 
   display: flex;
 
-  margin: 80px 0;
+  margin: 80px 0 60px 0;
 
   justify-content: center;
 }
@@ -201,83 +199,79 @@ header .navigation a {
 
 #contact {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+
+  padding: 0 5% 0 5%;
+
   align-items: center;
+  flex-flow: row;
+  justify-content: space-around;
 }
 
-#contact form {
+#contact .social {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
 
-#contact form > input, textarea {
-  margin: 10px;
-  border: 0;
-  outline: 0;
-  border-radius: 0;
-  border-style: none;
-  padding: 0;
-}
-
-#contact form > input[type="text"] {
-  width: 290px;
-  height: 40px;
-  padding-left: 10px;
-  font-family: 'OpenSans';
-}
-
-#contact form > textarea {
-  resize: none;
-  width: 280px;
+  width: 80%;
   max-width: 280px;
-  height: 280px;
-  max-height: 180px;
-  padding: 10px;
-  font-family: 'OpenSans';
+
+  justify-content: space-between;
 }
 
-#contact form > input[type="submit"] {
-  width: 300px;
-  height: 40px;
-  color: #111;
+#contact .email {
   font-family: 'OpenSans';
-  letter-spacing: 1px;
-  background: transparent;
-  border: 1px solid #111;
-  text-transform: uppercase;
-  font-size: 9px;
-  -webkit-appearance: button;
+  font-size: 12px;
+  line-height: 40px;
+
+  display: inline-block;
+
+  width: 100%;
+  max-width: 320px;
+  height: 40px;
+  margin: 20px 0 20px 0;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: black;
+  border: 1px solid #111111;
 }
 
 @media (max-width: 800px) {
   header .navigation--mobile {
     position: relative;
-    align-self: center;
+
     display: block;
 
+    width: 30px;
+    height: 30px;
     margin-right: 5%;
 
     cursor: pointer;
 
-    width: 30px;
-    height: 30px;
+    align-self: center;
   }
 
   header .navigation--mobile .menu {
-    margin: auto;
-    display: block;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    margin: auto;
   }
 
   header .navigation--mobile .cancel {
-    margin: auto;
-    display: none;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    margin: auto;
   }
 
   header .navigation {
@@ -325,5 +319,9 @@ header .navigation a {
 
   #about p {
     flex-basis: 80%;
+  }
+
+  #contact {
+    flex-flow: column;
   }
 }
