@@ -1,4 +1,5 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Source+Serif+Pro');
+/*@font-face {
   font-family: 'OpenSans-Light';
 
   src: url('../assets/fonts/OpenSans-Light.ttf') format ('truetype');
@@ -20,7 +21,7 @@
   font-family: 'SourceSerifPro-Regular';
 
   src: url('../assets/fonts/SourceSerifPro-Regular.ttf') format ('truetype');
-}
+}*/
 
 
 body {
@@ -70,7 +71,8 @@ header .navigation--mobile {
 }
 
 header .navigation a {
-  font-family: 'OpenSans-SemiBold';
+  font-family: 'Open Sans';
+  font-weight: 600;
   font-size: 11px;
 
   text-align: center;
@@ -93,7 +95,7 @@ header .navigation a {
 }
 
 #works .quote {
-  font-family: 'SourceSerifPro-Regular';
+  font-family: 'Source Serif Pro';
 
   margin: 20px 50% 0 50%;
 
@@ -148,15 +150,15 @@ header .navigation a {
 }
 
 #works .title {
-  font-family: 'OpenSans-SemiBold';
+  font-family: 'Open Sans';
+  font-weight: 600;
   font-size: 12px;
-  font-weight: normal;
 }
 
 #works .method {
-  font-family: 'OpenSans-Light';
+  font-family: 'Open Sans';
+  font-weight: 300;
   font-size: 10px;
-  font-weight: normal;
 }
 
 #about {
@@ -183,7 +185,7 @@ header .navigation a {
 }
 
 #about p {
-  font-family: 'SourceSerifPro-Regular';
+  font-family: 'Source Serif Pro';
   font-size: 14px;
   font-weight: 300;
   line-height: 65px;
@@ -213,7 +215,8 @@ header .navigation a {
 }
 
 #contact .email {
-  font-family: 'OpenSans-Regular';
+  font-family: 'Open Sans';
+  font-weight: 400;
   font-size: 12px;
   line-height: 40px;
 
