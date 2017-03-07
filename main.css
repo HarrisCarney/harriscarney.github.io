@@ -48,8 +48,8 @@ header .navigation--mobile {
 
 header .navigation a {
   font-family: 'Open Sans';
-  font-weight: 600;
   font-size: 11px;
+  font-weight: 600;
 
   text-align: center;
   text-decoration: none;
@@ -127,14 +127,14 @@ header .navigation a {
 
 #works .title {
   font-family: 'Open Sans';
-  font-weight: 600;
   font-size: 12px;
+  font-weight: 600;
 }
 
 #works .method {
   font-family: 'Open Sans';
-  font-weight: 300;
   font-size: 10px;
+  font-weight: 300;
 }
 
 #about {
@@ -192,8 +192,8 @@ header .navigation a {
 
 #contact .email {
   font-family: 'Open Sans';
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 40px;
 
   display: inline-block;
