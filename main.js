@@ -18,6 +18,11 @@ function toggleIcon() {
 				menuIcon.style.display = "block";
 				navContainer.classList.remove('active');
 				active = false;
+
+				event.preventDefault();
+				var href = this.getAttribute("href");
+				offset = document.querySelector(href).getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+				smoothScroll();
 			}
 		}
 
