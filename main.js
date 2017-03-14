@@ -34,6 +34,15 @@ function toggleIcon() {
 	}
 }
 
+for(var i = 0; i < links.length; i++) {
+	links[i].onclick = function() {
+		event.preventDefault();
+		var href = this.getAttribute("href");
+		offset = document.querySelector(href).getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+		smoothScroll();
+	}
+}
+
 menu.onclick = function() {
 	active = !active;
 	toggleIcon();
