@@ -8,8 +8,6 @@ function smoothScroll() {
   var speed    = distance / 10;
   var step     = start > end ? start - speed : start + speed;
 
-  console.log(distance + ', ' + speed + ', ' + step);
-
   if(distance > 0 && speed < 1) {
     step = start > end ? start - 1 : start + 1;
   }
