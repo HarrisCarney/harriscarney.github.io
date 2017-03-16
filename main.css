@@ -102,9 +102,9 @@ header .navigation a {
 
   text-align: center;
 
-  flex-basis: 960px;
+  flex-basis: 800px;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #works .flex {
@@ -143,15 +143,16 @@ header .navigation a {
 
   display: flex;
 
-  margin: 80px 0 60px 0;
+  margin: 80px auto 60px auto;
 
   justify-content: center;
+  max-width: 800px;
 }
 
 #about:before {
   position: absolute;
   top: 0;
-  left: 20%;
+  left: 0%;
 
   width: 20%;
   height: 4px;
@@ -169,17 +170,20 @@ header .navigation a {
 
   color: #636363;
 
-  flex-basis: 60%;
+/*  flex-basis: 60%;
+  flex-basis: 800px;*/
 }
 
 #contact {
   display: flex;
 
-  padding: 0 5% 0 5%;
+  /*padding: 0 5% 0 5%;*/
+  max-width: 800px;
+  margin: 0 auto;
 
   align-items: center;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #contact .social {
@@ -279,6 +283,10 @@ header .navigation a {
 
   #works {
     position: relative;
+  }
+
+  #works .container {
+    justify-content: space-around;
   }
 
   #works .flex {
