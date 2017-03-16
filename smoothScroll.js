@@ -5,7 +5,7 @@ function smoothScroll() {
   var end      = offset;
 
   var distance = Math.round(start > end ? start - end : end - start);
-  var speed    = distance / 20;
+  var speed    = distance / 15;
   var step     = start > end ? start - speed : start + speed;
 
   if(distance > 0 && speed < 1) {
