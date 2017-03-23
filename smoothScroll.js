@@ -1,22 +1,41 @@
-var offset;
+var offset, start_time = null;
+
+Math.smoothStep = function(x) {
+  return x*x*(3 - 2*x)
+}
+
+Math.easeInQuad = function (time, begin, change, duration) {
+  var v = Math.smoothStep(time /= duration);
+
+  if((v * 2) > 1) {
+    return change
+  }
+
+  return change * v * time;
+}
 
 function smoothScroll() {
-  var start    = self.pageYOffset;
-  var end      = offset;
+  start_time == null ? start_time = performance.now() : null;
 
-  var distance = Math.round(start > end ? start - end : end - start);
-  var speed    = distance / 15;
-  var step     = start > end ? start - speed : start + speed;
+  var start = self.pageYOffset;
+  var end = Math.round(offset);
 
-  if(distance > 0 && speed < 1) {
-    step = start > end ? start - 1 : start + 1;
+  if(end + self.innerHeight > document.body.offsetHeight) {
+    end = (document.body.offsetHeight - self.innerHeight) + 60;
   }
+
+  var distance = Math.sqrt(Math.pow(end - start, 2));
+
+  var speed = Math.easeInQuad(performance.now() - start_time, start, distance, 3000);
+  var step = start > end ? start - speed : start + speed;
 
   if(start !== end) {
-    window.scrollTo(0, step);
+    window.scrollTo(0, Math.round(step));
   }
 
-  if(distance > 0 && (window.innerHeight + window.scrollY) < (document.body.offsetHeight + 60)) {
+  if(distance > 0 && (self.innerHeight + self.pageYOffset) < (document.body.offsetHeight + 61)) {
     requestAnimationFrame(smoothScroll);
+  } else {
+    start_time = null;
   }
 }
