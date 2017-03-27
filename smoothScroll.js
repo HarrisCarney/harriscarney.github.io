@@ -1,7 +1,7 @@
 var offset, start_time = null;
 
 Math.smoothStep = function(x) {
-  return x*x*(3 - 2*x)
+  return x * x * (3 - 2 * x);
 }
 
 Math.easeInQuad = function (time, begin, change, duration) {
